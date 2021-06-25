@@ -1,10 +1,14 @@
-import React from 'react';
-import AppBrowser from 'app/core/containers/AppBrowser/AppBrowser';
+import React from "react";
+import RouterOutlet from "app/core/containers/RouterOutlet";
+import { FavoritesProvider } from "./context/store/favorites";
+
 function App() {
   return (
-    <div className="App">
-      <AppBrowser/>
-    </div>
+    <FavoritesProvider>
+      <div className="App">
+        <RouterOutlet />
+      </div>
+    </FavoritesProvider>
   );
 }
 

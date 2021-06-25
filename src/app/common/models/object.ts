@@ -1,0 +1,1 @@
+export type IBaseObject = {[key: string]: any};
