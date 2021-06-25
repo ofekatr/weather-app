@@ -1,5 +1,5 @@
-import React from "react";
 import RouterOutlet from "app/core/containers/RouterOutlet";
+import React from "react";
 import { FavoritesProvider } from "./context/store/favorites";
 
 function App() {
