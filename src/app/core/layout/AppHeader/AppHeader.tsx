@@ -20,7 +20,7 @@ const AppHeader: React.FC = () => {
         to="/"
         className="herolo-logo-wrapper"
       >
-        <img src={"images/herolo-logo.jpg"} />
+        <img alt='herolo-logo' src={"images/herolo-logo.jpg"} />
       </Link>
       <Menu.Item
         name="weather"
