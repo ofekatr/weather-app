@@ -8,7 +8,7 @@ const FavoriteCitiesList: React.FC = () => {
 
   return (
     <Card.Group id="favorite-items">
-      {favorites.map((favorite) => (
+      {favorites?.map((favorite) => (
         <FavoriteCityItem key={favorite.id} favorite={favorite}/>
       ))}
     </Card.Group>

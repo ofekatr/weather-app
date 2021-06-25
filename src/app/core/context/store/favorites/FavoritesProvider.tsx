@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 import IFavorite from "../models/favorite";
 import {
   DEFAULT_STATE_DATA,
-  FavoritesContext
+  FavoritesContext,
 } from "./context/favorites.context";
 import { IFavoritesContextData } from "./context/models/favorites-context";
 import FAVORITES_ACTIONS from "./favorites.actions";
@@ -16,18 +16,19 @@ const FavoritesProvider: React.FC = (props) => {
       type: FAVORITES_ACTIONS.ADD,
       payload: { newFavorite },
     });
-
-  const removeFavorite = (favoriteId: string) =>
+  const removeFavorite = (favoriteId: string) => {
     dispatch({
       type: FAVORITES_ACTIONS.REMOVE,
       payload: { favoriteId },
     });
+  };
 
   const { favorites } = state as IFavoritesContextData;
 
   return (
     <FavoritesContext.Provider
-      value={{ favorites, addFavorite, removeFavorite }} {...props}
+      value={{ favorites, addFavorite, removeFavorite }}
+      {...props}
     ></FavoritesContext.Provider>
   );
 };

@@ -24,16 +24,19 @@ const ACTION_TO_HANDLER: any = {
     [FAVORITES_ACTIONS.REMOVE]: (
         state: IFavoriteContext,
         { favoriteId }: IRemoveFavoritePayload
-    ) => ({
-        ...state,
-        favorites: state.favorites.filter(
-            (favorite) => favorite.id !== favoriteId
-        )
-    }),
+    ) => {
+        const newState = {
+            ...state,
+            favorites: state.favorites.filter(
+                (favorite) => favorite.id !== favoriteId
+            )
+        }
+        return newState;
+    },
 }
 
 function favoritesReducer(state: IFavoriteContext, action: any) {
-    return ACTION_TO_HANDLER[action.type] ?? state;
+    return ACTION_TO_HANDLER[action.type](state, action.payload) ?? state;
 }
 
 export default favoritesReducer;
