@@ -1,4 +1,4 @@
-import { getPageNameFromLocation } from "app/common/utils/path";
+import { getPageNameFromLocation } from "app/common/utils/paths";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Icon, Menu, MenuItemProps } from "semantic-ui-react";

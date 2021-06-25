@@ -1,4 +1,4 @@
-import { deepFreezeAndSeel } from 'app/common/utils/object';
+import { deepFreezeAndSeel } from 'app/common/utils/objects';
 
 const FAVORITES_ACTIONS: { [key: string]: string } =
     deepFreezeAndSeel({
