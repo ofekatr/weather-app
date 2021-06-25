@@ -4,15 +4,23 @@ import { Card } from "semantic-ui-react";
 
 const FavoritesPage: React.FC = () => {
   return (
-    <Card.Group>
-      <FavoriteCityItem />
-      <FavoriteCityItem />
-      <FavoriteCityItem />
-      <FavoriteCityItem />
-      <FavoriteCityItem />
-      <FavoriteCityItem />
-      <FavoriteCityItem />
-    </Card.Group>
+    <div className="favorite-items-wrapper">
+      <Card.Group id="favorite-items">
+        <FavoriteCityItem />
+        <FavoriteCityItem />
+        <FavoriteCityItem />
+        <FavoriteCityItem />
+        <FavoriteCityItem />
+        <FavoriteCityItem />
+        <FavoriteCityItem />
+        <FavoriteCityItem />
+        <FavoriteCityItem />
+        <FavoriteCityItem />
+        <FavoriteCityItem />
+        <FavoriteCityItem />
+        <FavoriteCityItem />
+      </Card.Group>
+    </div>
   );
 };
 
