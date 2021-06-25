@@ -1,9 +1,9 @@
 import React from 'react';
-
+import AppBrowser from 'app/core/containers/AppBrowser/AppBrowser';
 function App() {
   return (
     <div className="App">
-      Hello, World!
+      <AppBrowser/>
     </div>
   );
 }
