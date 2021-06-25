@@ -1,6 +1,10 @@
 #week-day-forecast.week-day-forecast{
     margin: auto;
   
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
     & > * {
       margin: auto;
     }
