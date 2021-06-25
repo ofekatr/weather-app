@@ -1,11 +1,16 @@
 .app-content {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #content-card {
+  display: flex;
   width: 80vw;
-  min-height: 100vh;
+  min-height: 100vh !important;
   padding: 1em;
   background-color: rgba(255, 255, 255, 0.9);
+
+  & > * {
+    flex: 1;
+  }
 }

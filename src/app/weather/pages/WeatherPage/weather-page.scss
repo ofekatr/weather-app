@@ -1,6 +1,13 @@
 .weather-page {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
     &__search-bar {
-        display: flex;
-        justify-content: center;
+        margin: auto;
+    }
+
+    &__forecast {
+        flex: 1;
     }
 }

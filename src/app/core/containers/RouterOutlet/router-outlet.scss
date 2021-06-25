@@ -1,0 +1,17 @@
+.router-outlet-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .app-page {
+        flex: 1;
+    }
+}
+
+.app-page {
+    display: flex;
+    flex-direction: column;
+
+    & > div {
+        flex: 1;
+    }
+}

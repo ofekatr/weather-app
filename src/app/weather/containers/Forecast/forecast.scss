@@ -1,0 +1,34 @@
+.forecast-card#forecast-card {
+  margin: auto;
+  min-width: 80%;
+  min-height: 95%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &__current-forecast {
+    text-align: center;
+  }
+}
+
+.weekly-forecast {
+  display: flex;
+  margin-left: 1em;
+  margin-right: 1em;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1em;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+#week-day-forecast {
+  margin: auto;
+
+  & > * {
+    margin: auto;
+  }
+}
