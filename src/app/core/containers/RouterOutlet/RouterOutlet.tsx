@@ -2,7 +2,6 @@ import AppHeader from "app/core/layout/AppHeader";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PAGES_TO_ROUTES from "./constants/routes";
-import './router-outlet.scss';
 
 const WeatherPage = React.lazy(() => import("app/weather/pages/WeatherPage"));
 const FavoritesPage = React.lazy(() =>

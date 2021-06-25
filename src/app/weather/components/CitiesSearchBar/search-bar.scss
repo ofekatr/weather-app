@@ -1,0 +1,12 @@
+.search-bar {
+    width: 40vw;
+    height: 2em;
+    .input {
+        height: 100%;
+        width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
