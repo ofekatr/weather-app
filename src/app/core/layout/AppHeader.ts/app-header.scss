@@ -1,0 +1,12 @@
+.herolo-logo-wrapper {
+  margin-left: 0.8em;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > img {
+    max-height: 85%;
+    border-radius: 5px;
+  }
+}

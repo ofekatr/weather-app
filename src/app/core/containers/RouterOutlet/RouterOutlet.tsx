@@ -1,4 +1,4 @@
-import AppHeader from "app/core/layout/AppHeader";
+import AppHeader from "app/core/layout/AppHeader.ts/AppHeader";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PAGES_TO_ROUTES from "./constants/routes";
