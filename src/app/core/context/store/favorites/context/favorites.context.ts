@@ -6,7 +6,31 @@ import IFavoriteContext, { IFavoriteContextMethods, IFavoritesContextData } from
 const DEFAULT_STATE_DATA: IFavoritesContextData = {
     favorites: [
         {
-            id: 'x',
+            id: 'asdasd',
+            cityName: 'Tel-Aviv',
+        },
+        {
+            id: 'asdsdasdasd',
+            cityName: 'Tel-Aviv',
+        },
+        {
+            id: 'fdsfsdf',
+            cityName: 'Tel-Aviv',
+        },
+        {
+            id: 'gdfgdfg',
+            cityName: 'Tel-Aviv',
+        },
+        {
+            id: 'xczvcv',
+            cityName: 'Tel-Aviv',
+        },
+        {
+            id: 'werewr',
+            cityName: 'Tel-Aviv',
+        },
+        {
+            id: 'ggggggggggg',
             cityName: 'Tel-Aviv',
         }
     ],

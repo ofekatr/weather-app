@@ -1,12 +1,17 @@
+import IFavorite from 'app/core/context/store/models/favorite';
 import React from "react";
 import { Card, Button } from "semantic-ui-react";
 import "./favorite-city-item.scss";
 
-const FavoriteCityItem: React.FC = () => {
+interface FavoriteCityItemProps {
+  favorite: IFavorite;
+}
+
+const FavoriteCityItem: React.FC<FavoriteCityItemProps> = ({ favorite }) => {
   return (
     <Card>
       <Card.Header className="card__card-header card-header">
-        <div className="card-header__city-name">Tel-Aviv</div>
+        <div className="card-header__city-name">{favorite.cityName}</div>
         <div className="card-header__buttons">
           <Button color="red" icon="trash" size="small"></Button>
         </div>

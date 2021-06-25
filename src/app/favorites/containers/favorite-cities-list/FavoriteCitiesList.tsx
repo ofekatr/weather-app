@@ -1,23 +1,16 @@
+import { FavoritesContext } from "app/core/context/store/favorites";
 import FavoriteCityItem from "app/favorites/components/FavoriteCityItem";
-import React from "react";
+import React, { useContext } from "react";
 import { Card } from "semantic-ui-react";
 
 const FavoriteCitiesList: React.FC = () => {
+  const { favorites } = useContext(FavoritesContext);
+
   return (
     <Card.Group id="favorite-items">
-      <FavoriteCityItem />
-      <FavoriteCityItem />
-      <FavoriteCityItem />
-      <FavoriteCityItem />
-      <FavoriteCityItem />
-      <FavoriteCityItem />
-      <FavoriteCityItem />
-      <FavoriteCityItem />
-      <FavoriteCityItem />
-      <FavoriteCityItem />
-      <FavoriteCityItem />
-      <FavoriteCityItem />
-      <FavoriteCityItem />
+      {favorites.map((favorite) => (
+        <FavoriteCityItem key={favorite.id} favorite={favorite}/>
+      ))}
     </Card.Group>
   );
 };
