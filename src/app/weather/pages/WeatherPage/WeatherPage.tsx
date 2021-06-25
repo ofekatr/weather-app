@@ -1,4 +1,4 @@
-import Forecast from "app/weather/containers/Forecast";
+import Forecast from "app/weather/components/Forecast";
 import React from "react";
 import CitiesSearchBar from "../../components/CitiesSearchBar";
 import "./weather-page.scss";
