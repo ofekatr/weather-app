@@ -5,3 +5,15 @@
     display: flex;
     justify-content: space-between;
 }
+
+.details {
+    text-align: center;
+
+    &__city-name {
+        font-size: 1.6rem;
+    }
+
+    &__temperature {
+        font-size: 1.2rem;
+    }
+}

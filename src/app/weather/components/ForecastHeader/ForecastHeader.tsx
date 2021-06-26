@@ -15,9 +15,9 @@ const ForecastHeader: React.FC<IForecastHeaderProps> = ({
 }) => {
   return (
     <div className={`${className} forecast-header`}>
-      <div className="details">
-        <div>{cityName}</div>
-        <div>{`${temperature.value} °${temperature.unit}`}</div>
+      <div className="forecast-header__details details">
+        <div className="details__city-name">{cityName}</div>
+        <div className="details__temperature">{`${temperature.value} °${temperature.unit}`}</div>
       </div>
       <div className="favorite-button">
         <Icon
