@@ -1,15 +1,15 @@
 import FavoriteCityItem from "app/favorites/components/FavoriteCityItem";
-import IForecast from "app/weather/models/data/forecast";
+import useFavoritesPageData from "app/favorites/hooks/useFavoritesPageData";
 import React from "react";
 import { Card, Container } from "semantic-ui-react";
 
-interface IFavoriteCitiesListProps {
-  citiesForecasts: IForecast[];
-}
+const FavoriteCitiesList: React.FC = () => {
+  const { citiesForecasts, hasError, isLoading } = useFavoritesPageData();
 
-const FavoriteCitiesList: React.FC<IFavoriteCitiesListProps> = ({
-  citiesForecasts,
-}) => {
+  if (hasError) return <div>An error has occured</div>;
+
+  if (isLoading || !citiesForecasts) return <div>Loading...</div>;
+
   return (
     <Container>
       <Card.Group centered stackable itemsPerRow={4} id="favorite-items">

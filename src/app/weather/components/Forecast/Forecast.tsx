@@ -18,27 +18,33 @@ const Forecast: React.FC<IForecastProps> = ({ city }) => {
 
   const forecastPageData = getForecastPageData();
 
-  if (checkLoading() || !forecastPageData) return <div>Loading...</div>;
-
-  if (checkError()) return <div>An error has occured.</div>;
-
-  const { week, current } = forecastPageData;
-
   return (
-    <Card id="forecast-card" className="forecast__forecast-card forecast-card">
-      <ForecastHeader
-        city={city}
-        temperature={current.temperature}
-        className="forecast-card__header header"
-      />
-      <ForecastCurrentWeather
-        currentWeather={current}
-        className="forecast-card__current-weather"
-      />
-      <WeekForecasts
-        dailyForecasts={week.dailyForecasts}
-        className="forecast-card__weekly-forecast"
-      />
+    <Card
+      raised
+      id="forecast-card"
+      className="forecast__forecast-card forecast-card"
+    >
+      {checkError() ? (
+        <div>An error has occured.</div>
+      ) : checkLoading() || !forecastPageData ? (
+        <div>Loading...</div>
+      ) : (
+        <>
+          <ForecastHeader
+            city={city}
+            temperature={forecastPageData.current.temperature}
+            className="forecast-card__header header"
+          />
+          <ForecastCurrentWeather
+            currentWeather={forecastPageData.current}
+            className="forecast-card__current-weather"
+          />
+          <WeekForecasts
+            dailyForecasts={forecastPageData.week.dailyForecasts}
+            className="forecast-card__weekly-forecast"
+          />
+        </>
+      )}
     </Card>
   );
 };
