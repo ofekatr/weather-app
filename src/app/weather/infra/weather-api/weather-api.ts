@@ -19,49 +19,89 @@ async function fetchWeekForecast(_id: string): Promise<IWeekForecast> {
         dailyForecasts: [
             {
                 date: new Date(),
-                dayIconNumber: 1,
-                nightIconNumber: 33,
-                temperature: {
-                    unit: 'C',
-                    value: 27.3,
+                day: {
+                    temperature: {
+                        unit: 'C',
+                        value: 27.3,
+                    },
+                    iconNumber: 1,
+                },
+                night: {
+                    temperature: {
+                        unit: 'C',
+                        value: 27.3,
+                    },
+                    iconNumber: 1,
                 }
             },
             {
                 date: new Date(),
-                dayIconNumber: 1,
-                nightIconNumber: 33,
-                temperature: {
-                    unit: 'C',
-                    value: 27.3,
+                day: {
+                    temperature: {
+                        unit: 'C',
+                        value: 27.3,
+                    },
+                    iconNumber: 1,
+                },
+                night: {
+                    temperature: {
+                        unit: 'C',
+                        value: 27.3,
+                    },
+                    iconNumber: 1,
                 }
             },
             {
                 date: new Date(),
-                dayIconNumber: 1,
-                nightIconNumber: 33,
-                temperature: {
-                    unit: 'C',
-                    value: 27.3,
+                day: {
+                    temperature: {
+                        unit: 'C',
+                        value: 27.3,
+                    },
+                    iconNumber: 1,
+                },
+                night: {
+                    temperature: {
+                        unit: 'C',
+                        value: 27.3,
+                    },
+                    iconNumber: 1,
                 }
             },
             {
                 date: new Date(),
-                dayIconNumber: 1,
-                nightIconNumber: 33,
-                temperature: {
-                    unit: 'C',
-                    value: 27.3,
+                day: {
+                    temperature: {
+                        unit: 'C',
+                        value: 27.3,
+                    },
+                    iconNumber: 1,
+                },
+                night: {
+                    temperature: {
+                        unit: 'C',
+                        value: 27.3,
+                    },
+                    iconNumber: 1,
                 }
             },
             {
                 date: new Date(),
-                dayIconNumber: 1,
-                nightIconNumber: 33,
-                temperature: {
-                    unit: 'C',
-                    value: 27.3,
+                day: {
+                    temperature: {
+                        unit: 'C',
+                        value: 27.3,
+                    },
+                    iconNumber: 1,
+                },
+                night: {
+                    temperature: {
+                        unit: 'C',
+                        value: 27.3,
+                    },
+                    iconNumber: 1,
                 }
-            }
+            },
         ]
     }
 }

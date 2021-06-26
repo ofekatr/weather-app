@@ -1,6 +1,7 @@
 import { IPropsWithClassName } from "app/common/models/component-props";
 import { IDailyForecast } from "app/weather/models/data/week-forecast";
 import React from "react";
+import { Card } from "semantic-ui-react";
 import WeekDayForecast from "../WeekDayForecast";
 import "./week-forecast.scss";
 
@@ -14,9 +15,11 @@ const WeekForecasts: React.FC<IWeekForecastsProps> = ({
 }) => {
   return (
     <div className={`${className} weekly-forecast`}>
-      {dailyForecasts.map((dailyForecast) => (
-        <WeekDayForecast dailyForecast={dailyForecast} />
-      ))}
+      <Card.Group stackable itemsPerRow={5}>
+        {dailyForecasts.map((dailyForecast) => (
+          <WeekDayForecast dailyForecast={dailyForecast} />
+        ))}
+      </Card.Group>
     </div>
   );
 };

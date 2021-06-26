@@ -1,11 +1,26 @@
-#week-day-forecast.week-day-forecast{
-    margin: auto;
-  
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+#week-day-forecast {
+  margin: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
 
-    & > * {
-      margin: auto;
-    }
+.week-day-forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  &__day-name {
+    text-align: center;
+    font-size: 1.4rem;
   }
+}
+
+.times-in-day-temps {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.temp-item {
+  text-align: center;
+}
