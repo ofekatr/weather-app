@@ -1,3 +1,4 @@
+import ICity from 'app/common/models/city';
 import IWeekForecast from 'app/weather/models/data/week-forecast';
 import IForecast from '../../models/data/forecast'
 
@@ -108,7 +109,22 @@ async function fetchWeekForecast(_id: string): Promise<IWeekForecast> {
     }
 }
 
+async function fetchSearchResults(searchInput: string): Promise<ICity[]> {
+    await (new Promise<void>((resolve) => setTimeout(() => resolve(), 500)));
+    return [
+        {
+            cityId: '23',
+            cityName: 'Tel-Aviv'
+        },
+        {
+            cityId: '24',
+            cityName: 'Jaffa'
+        },
+    ]
+}
+
 export {
     fetchCityCurrentForecast,
     fetchWeekForecast,
+    fetchSearchResults,
 }
