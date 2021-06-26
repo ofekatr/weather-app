@@ -8,6 +8,6 @@ const FAVORITES_ACTIONS: { [key: string]: string } =
     });
 
 
-type FAVORITES_ACTIONS = keyof typeof FAVORITES_ACTIONS;
+export type IFavoritesActions = keyof typeof FAVORITES_ACTIONS;
 
 export default FAVORITES_ACTIONS;

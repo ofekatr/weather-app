@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import {
   DEFAULT_STATE_DATA,
-  FavoritesContext,
+  FavoritesContext
 } from "./context/favorites.context";
 import { IFavoritesContextData } from "./context/models/favorites-context";
 import FAVORITES_ACTIONS from "./favorites.actions";

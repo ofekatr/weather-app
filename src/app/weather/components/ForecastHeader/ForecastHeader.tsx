@@ -1,7 +1,7 @@
 import ICity from "app/common/models/city";
 import { FavoritesContext } from "app/core/context/store/favorites";
 import { ITemperature } from "app/weather/models/data/forecast";
-import React, { useContext } from "react";
+import React, { useCallback, useContext } from "react";
 import { Icon } from "semantic-ui-react";
 import "./forecast-header.scss";
 interface IForecastHeaderProps {
@@ -15,7 +15,14 @@ const ForecastHeader: React.FC<IForecastHeaderProps> = ({
   city: { cityId, cityName },
   temperature,
 }) => {
-  const { addFavorite } = useContext(FavoritesContext);
+  const { addFavorite, checkExists, removeFavorite } = useContext(
+    FavoritesContext
+  );
+
+  const handleFavoriteButtonClicked = useCallback(() => {
+    if (checkExists(cityId)) return removeFavorite(cityId);
+    return addFavorite(cityId);
+  }, [cityId, addFavorite, checkExists, removeFavorite]);
 
   return (
     <div className={`${className} forecast-header`}>
@@ -26,9 +33,9 @@ const ForecastHeader: React.FC<IForecastHeaderProps> = ({
       <div className="forecast-header__favorite-button">
         <Icon
           size="big"
-          color="yellow"
-          name={`star${true ? " outline" : ""}`}
-          onClick={() => addFavorite(cityId)}
+          color="red"
+          name={`heart${checkExists(cityId) ? "" : " outline"}`}
+          onClick={handleFavoriteButtonClicked}
         />
       </div>
     </div>
