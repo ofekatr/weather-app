@@ -1,12 +1,22 @@
+import { extractShortDayNameFromDate } from "app/common/utils/dates";
+import { IDailyForecast } from "app/weather/models/data/week-forecast";
 import React from "react";
 import { Card } from "semantic-ui-react";
 import "./week-day-forecast.scss";
 
-const WeekDayForecast: React.FC = () => {
+interface IWeekDayForecastProps {
+  dailyForecast: IDailyForecast;
+}
+
+const WeekDayForecast: React.FC<IWeekDayForecastProps> = ({
+  dailyForecast: { date, dayIconNumber, nightIconNumber, temperature },
+}) => {
+  const dayName = extractShortDayNameFromDate(date);
+
   return (
     <Card id="week-day-forecast" className="week-day-forecast">
-      <div>Sun</div>
-      <div>25 °C</div>
+      <div>{dayName}</div>
+      <div>{`${temperature.value} °${temperature.unit}`}</div>
     </Card>
   );
 };

@@ -10,7 +10,7 @@ const WeatherPage: React.FC = () => {
         <CitiesSearchBar />
       </div>
       <div className="weather-page__forecast">
-        <Forecast />
+        <Forecast cityName='Tel-Aviv'/>
       </div>
     </div>
   );

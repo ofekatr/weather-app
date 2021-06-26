@@ -7,16 +7,3 @@
   flex-direction: column;
   justify-content: space-around;
 }
-
-.weekly-forecast {
-  display: flex;
-  margin-left: 1em;
-  margin-right: 1em;
-  justify-content: space-around;
-  align-items: center;
-  gap: 1em;
-
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-  }
-}
