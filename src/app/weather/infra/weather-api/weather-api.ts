@@ -1,7 +1,7 @@
 import IWeekForecast from 'app/weather/models/data/week-forecast';
 import IForecast from '../../models/data/forecast'
 
-async function fetchCityCurrentForecast(_id: string): Promise<IForecast> {
+async function fetchCityCurrentForecast(id: string): Promise<IForecast> {
     await (new Promise<void>((resolve) => setTimeout(() => resolve(), 500)));
     return {
         weatherText: 'SUNNY',
@@ -10,6 +10,8 @@ async function fetchCityCurrentForecast(_id: string): Promise<IForecast> {
             value: 27.3,
         },
         weatherIconNumber: 3,
+        cityName: 'Tel Aviv',
+        id
     }
 }
 

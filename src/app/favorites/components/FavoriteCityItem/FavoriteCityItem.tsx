@@ -1,22 +1,22 @@
 import { FavoritesContext } from "app/core/context/store/favorites";
-import IFavorite from "app/core/context/store/models/favorite";
+import IForecast from "app/weather/models/data/forecast";
 import React, { useContext } from "react";
-import { Card, Button } from "semantic-ui-react";
+import { Button, Card } from "semantic-ui-react";
 import "./favorite-city-item.scss";
 
 interface FavoriteCityItemProps {
-  favorite: IFavorite;
+  cityForecast: IForecast;
 }
 
-const FavoriteCityItem: React.FC<FavoriteCityItemProps> = ({ favorite }) => {
+const FavoriteCityItem: React.FC<FavoriteCityItemProps> = ({ cityForecast }) => {
   const { removeFavorite } = useContext(FavoritesContext);
 
-  const handleRemoveButtonClicked = () => removeFavorite(favorite.id);
+  const handleRemoveButtonClicked = () => removeFavorite(cityForecast.id);
 
   return (
     <Card>
       <Card.Header className="card__card-header card-header">
-        <div className="card-header__city-name">{favorite.id}</div>
+        <div className="card-header__city-name">{cityForecast.cityName}</div>
         <div className="card-header__buttons">
           <Button
             onClick={handleRemoveButtonClicked}
