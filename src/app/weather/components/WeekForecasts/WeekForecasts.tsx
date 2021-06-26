@@ -17,7 +17,7 @@ const WeekForecasts: React.FC<IWeekForecastsProps> = ({
     <div className={`${className} weekly-forecast`}>
       <Card.Group stackable itemsPerRow={5}>
         {dailyForecasts.map((dailyForecast) => (
-          <WeekDayForecast dailyForecast={dailyForecast} />
+          <WeekDayForecast key={dailyForecast.date.toString()} dailyForecast={dailyForecast} />
         ))}
       </Card.Group>
     </div>

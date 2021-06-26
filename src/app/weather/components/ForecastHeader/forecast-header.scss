@@ -4,6 +4,10 @@
     margin-left: auto;
     display: flex;
     justify-content: space-between;
+
+    &__favorite-button {
+        cursor: pointer;
+    }
 }
 
 .details {

@@ -10,7 +10,7 @@ export interface IRemoveFavoritePayload {
     favoriteId: string;
 }
 
-const ACTION_TO_HANDLER: any = {
+const ACTION_TO_HANDLER: { [key in FAVORITES_ACTIONS]: any } = {
     [FAVORITES_ACTIONS.ADD]:
         (state: IFavoriteContext, { newFavorite }: IAddFavoritePayload) => (
             {

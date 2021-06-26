@@ -1,3 +1,4 @@
+import ICity from "app/common/models/city";
 import useForecastPageData from "app/weather/hooks/useForecastPageData";
 import React from "react";
 import { Card } from "semantic-ui-react";
@@ -7,12 +8,12 @@ import WeekForecasts from "../WeekForecasts";
 import "./forecast.scss";
 
 interface IForecastProps {
-  cityName: string;
+  city: ICity;
 }
 
-const Forecast: React.FC<IForecastProps> = ({ cityName }) => {
+const Forecast: React.FC<IForecastProps> = ({ city }) => {
   const { checkError, checkLoading, getForecastPageData } = useForecastPageData(
-    cityName
+    city.cityId
   );
 
   const forecastPageData = getForecastPageData();
@@ -26,7 +27,7 @@ const Forecast: React.FC<IForecastProps> = ({ cityName }) => {
   return (
     <Card id="forecast-card" className="forecast__forecast-card forecast-card">
       <ForecastHeader
-        cityName={cityName}
+        city={city}
         temperature={current.temperature}
         className="forecast-card__header header"
       />
