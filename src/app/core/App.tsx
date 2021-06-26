@@ -4,6 +4,7 @@ import AppContent from "./containers/AppContent/AppContent";
 import { FavoritesProvider } from "./context/store/favorites";
 
 function App() {
+
   return (
     <FavoritesProvider>
       <div className="App">

@@ -6,7 +6,7 @@ import { Card, Container } from "semantic-ui-react";
 const FavoriteCitiesList: React.FC = () => {
   const { citiesForecasts, hasError, isLoading } = useFavoritesPageData();
 
-  if (hasError) return <div>An error has occured</div>;
+  if (hasError) return <div></div>;
 
   if (isLoading || !citiesForecasts) return <div>Loading...</div>;
 

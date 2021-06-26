@@ -1,3 +1,4 @@
+import { onError } from 'app/common/utils/errors/on-error';
 import { FavoritesContext } from 'app/core/context/store/favorites';
 import { fetchCityCurrentForecast } from 'app/weather/infra/weather-api';
 import IForecast from 'app/weather/models/data/forecast';
@@ -5,7 +6,7 @@ import { useCallback, useContext, useEffect, useState } from 'react';
 
 function useFavoritesPageData() {
     const { favorites } = useContext(FavoritesContext);
-    const [hasError, setHasError] = useState(false);
+    const [hasError, setHasError] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
     const [citiesForecasts, setCitiesForecasts] = useState<IForecast[] | null>(null);
 
@@ -19,6 +20,7 @@ function useFavoritesPageData() {
             );
             setCitiesForecasts(responses);
         } catch (err) {
+            onError(err, 'Failed to Get Favorites 😵');
             setHasError(true);
         }
         setIsLoading(false);

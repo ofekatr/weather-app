@@ -1,3 +1,4 @@
+import { onError } from 'app/common/utils/errors/on-error';
 import assert from 'assert';
 import { useCallback, useEffect, useState } from 'react';
 import { fetchCityCurrentForecast } from '../infra/weather-api';
@@ -16,6 +17,7 @@ function useCurrentForecast(cityId: string) {
                 assert.ok(currentForecast, 'Forecast response has no data');
                 setCurrentForecast(currentForecast);
             } catch (err) {
+                onError(err, 'Failed to Get Forecast 😵');
                 setHasError(true);
             }
             setIsLoading(false);
@@ -29,7 +31,7 @@ function useCurrentForecast(cityId: string) {
 
 
     return {
-        isLoading, hasError, forecast: currentForecast, 
+        isLoading, hasError, forecast: currentForecast,
     }
 
 }

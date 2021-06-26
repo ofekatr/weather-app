@@ -1,3 +1,4 @@
+import { onError } from 'app/common/utils/errors/on-error';
 import assert from 'assert';
 import { useCallback, useEffect, useState } from 'react';
 import { fetchWeekForecast } from '../infra/weather-api/weather-api';
@@ -16,6 +17,7 @@ function useWeekForecast(cityId: string) {
                 assert.ok(weekForecast, 'Forecast response has no data');
                 setWeekForecast(weekForecast);
             } catch (err) {
+                onError(err, 'Failed to Get Weekly Forecast 😵');
                 setHasError(true);
             }
             setIsLoading(false);
