@@ -16,7 +16,7 @@ const FavoriteCityItem: React.FC<FavoriteCityItemProps> = ({ favorite }) => {
   return (
     <Card>
       <Card.Header className="card__card-header card-header">
-        <div className="card-header__city-name">{favorite.cityName}</div>
+        <div className="card-header__city-name">{favorite.id}</div>
         <div className="card-header__buttons">
           <Button
             onClick={handleRemoveButtonClicked}
