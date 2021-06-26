@@ -1,3 +1,4 @@
+import CustomPopup from "app/common/containers/Popup";
 import { getPageNameFromLocation } from "app/common/utils/paths";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
@@ -20,26 +21,30 @@ const AppHeader: React.FC = () => {
         to="/"
         className="herolo-logo-wrapper"
       >
-        <img alt='herolo-logo' src={"images/herolo-logo.jpg"} />
+        <img alt="herolo-logo" src={"images/herolo-logo.jpg"} />
       </Link>
-      <Menu.Item
-        name="weather"
-        onClick={handleItemClick}
-        active={activeItem === "weather"}
-        as={Link}
-        to={"/"}
-      >
-        <Icon name="home"></Icon>
-      </Menu.Item>
-      <Menu.Item
-        name="favorites"
-        onClick={handleItemClick}
-        active={activeItem === "favorites"}
-        as={Link}
-        to={"/favorites"}
-      >
-        <Icon name="favorite"></Icon>
-      </Menu.Item>
+      <CustomPopup content="Home">
+        <Menu.Item
+          name="weather"
+          onClick={handleItemClick}
+          active={activeItem === "weather"}
+          as={Link}
+          to={"/"}
+        >
+          <Icon name="home"></Icon>
+        </Menu.Item>
+      </CustomPopup>
+      <CustomPopup content="Favorites">
+        <Menu.Item
+          name="favorites"
+          onClick={handleItemClick}
+          active={activeItem === "favorites"}
+          as={Link}
+          to={"/favorites"}
+        >
+          <Icon name="favorite"></Icon>
+        </Menu.Item>
+      </CustomPopup>
     </Menu>
   );
 };

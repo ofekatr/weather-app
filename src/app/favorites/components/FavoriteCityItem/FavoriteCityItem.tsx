@@ -1,3 +1,4 @@
+import CustomPopup from "app/common/containers/Popup";
 import { FavoritesContext } from "app/core/context/store/favorites";
 import IForecast from "app/weather/models/data/forecast";
 import React, { useContext, useState } from "react";
@@ -26,12 +27,14 @@ const FavoriteCityItem: React.FC<FavoriteCityItemProps> = ({
       <Card.Header className="card__card-header card-header">
         <div className="card-header__city-name">{cityForecast.cityName}</div>
         <div className="card-header__buttons">
-          <Button
-            onClick={handleRemoveButtonClicked}
-            color="red"
-            icon="trash"
-            size="small"
-          ></Button>
+          <CustomPopup content="Remove">
+            <Button
+              onClick={handleRemoveButtonClicked}
+              color="red"
+              icon="trash"
+              size="small"
+            ></Button>
+          </CustomPopup>
         </div>
       </Card.Header>
       <Card.Content>

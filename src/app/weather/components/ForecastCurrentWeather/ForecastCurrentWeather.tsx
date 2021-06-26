@@ -16,7 +16,7 @@ const ForecastCurrentWeather: React.FC<IForecastCurrentWeatherProps> = ({
 }) => {
   return <div className={`${className} current-forecast`}>
     <div className="current-forecast__weather-text">{weatherText}</div>
-    <img className='current-forecast__weather-image' src={`images/${weatherIconNumber}.png`} alt="" />
+    <img className='current-forecast__weather-image' src={`images/${weatherIconNumber}.png`} alt="weather-icon" />
     </div>;
 };
 
