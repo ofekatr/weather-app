@@ -31,7 +31,7 @@ const Forecast: React.FC<IForecastProps> = ({ cityName }) => {
         className="forecast-card__header header"
       />
       <ForecastCurrentWeather
-        weatherText={current.weatherText}
+        currentWeather={current}
         className="forecast-card__current-weather"
       />
       <WeekForecasts
