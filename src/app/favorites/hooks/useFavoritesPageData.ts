@@ -6,7 +6,7 @@ import { useCallback, useContext, useEffect, useState } from 'react';
 
 function useFavoritesPageData() {
     const { favorites } = useContext(FavoritesContext);
-    const [hasError, setHasError] = useState(true);
+    const [hasError, setHasError] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [citiesForecasts, setCitiesForecasts] = useState<IForecast[] | null>(null);
 
