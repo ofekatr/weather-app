@@ -19,9 +19,9 @@ const AppHeader: React.FC = () => {
       <Link
         onClick={(e) => handleItemClick(e, { name: "weather" })}
         to="/"
-        className="herolo-logo-wrapper"
+        className="weather-app-logo-wrapper"
       >
-        <img alt="herolo-logo" src={"images/herolo-logo.jpg"} />
+        <img alt="weather-app-logo" src={"images/weather-app-logo.jpg"} />
       </Link>
       <CustomPopup content="Home">
         <Menu.Item
