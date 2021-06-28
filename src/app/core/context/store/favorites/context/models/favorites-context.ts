@@ -5,7 +5,7 @@ export interface IFavoritesContextData {
 }
 
 export interface IFavoriteContextMethods {
-    addFavorite: (newFavorite: string) => void;
+    addFavorite: (newFavorite: IFavorite) => void;
     removeFavorite: (favoriteId: string) => void;
     checkExists: (favoriteId: string) => boolean;
 }

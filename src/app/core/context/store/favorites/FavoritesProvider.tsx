@@ -1,4 +1,5 @@
 import React, { useReducer } from "react";
+import IFavorite from "../models/favorite";
 import {
   DEFAULT_STATE_DATA,
   FavoritesContext
@@ -10,10 +11,10 @@ import favoritesReducer from "./favorites.reducer";
 const FavoritesProvider: React.FC = (props) => {
   const [state, dispatch] = useReducer(favoritesReducer, DEFAULT_STATE_DATA);
 
-  const addFavorite = (newFavoriteId: string) =>
+  const addFavorite = (newFavorite: IFavorite) =>
     dispatch({
       type: FAVORITES_ACTIONS.ADD,
-      payload: { newFavorite: { id: newFavoriteId } },
+      payload: { newFavorite },
     });
 
   const removeFavorite = (favoriteId: string) => {

@@ -21,7 +21,7 @@ const ForecastHeader: React.FC<IForecastHeaderProps> = ({
 
   const handleFavoriteButtonClicked = useCallback(() => {
     if (checkExists(cityId)) return removeFavorite(cityId);
-    return addFavorite(cityId);
+    return addFavorite({ cityId, cityName });
   }, [cityId, addFavorite, checkExists, removeFavorite]);
 
   return (
