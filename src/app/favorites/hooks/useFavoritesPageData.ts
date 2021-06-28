@@ -1,6 +1,6 @@
+import { fetchCityCurrentForecast } from 'app/common/services/weather';
 import { onError } from 'app/common/utils/errors/on-error';
 import { FavoritesContext } from 'app/core/context/store/favorites';
-import { fetchCityCurrentForecast } from 'app/common/infra/weather-api';
 import IForecast from 'app/weather/models/data/forecast';
 import { useCallback, useContext, useEffect, useState } from 'react';
 

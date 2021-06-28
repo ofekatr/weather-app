@@ -1,7 +1,1 @@
-import {
-    fetchCityCurrentForecast,
-} from './weather-api';
-
-export {
-    fetchCityCurrentForecast,
-}
+export * from './weather-api';

@@ -1,7 +1,7 @@
+import { fetchWeekForecast } from 'app/common/services/weather';
 import { onError } from 'app/common/utils/errors/on-error';
 import assert from 'assert';
 import { useCallback, useEffect, useState } from 'react';
-import { fetchWeekForecast } from '../../common/infra/weather-api/weather-api';
 import IWeekForecast from '../models/data/week-forecast';
 
 function useWeekForecast(cityId: string) {

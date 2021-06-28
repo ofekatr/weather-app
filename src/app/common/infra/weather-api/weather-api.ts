@@ -5,7 +5,7 @@ import mapWeatherApiAutocompleteResultDtoToDomain from './models/dtos/autocomple
 import { mapForecastDtoToDomain } from './models/dtos/forecast/forecast.mapper';
 import { mapWeekForecastDtoToDomain } from './models/dtos/week-forecast/weekly-forecast.mapper';
 
-async function fetchCityCurrentForecast(city: ICity): Promise<IForecast> {
+async function apiFetchCityCurrentForecast(city: ICity): Promise<IForecast> {
     await (new Promise<void>((resolve) => setTimeout(() => resolve(), 500)));
     return mapForecastDtoToDomain(city, {
         Temperature: {
@@ -23,7 +23,7 @@ async function fetchCityCurrentForecast(city: ICity): Promise<IForecast> {
     });
 }
 
-async function fetchWeekForecast(_id: string): Promise<IWeekForecast> {
+async function apiFetchWeekForecast(_id: string): Promise<IWeekForecast> {
     await (new Promise<void>((resolve) => setTimeout(() => resolve(), 500)));
     return mapWeekForecastDtoToDomain({
         DailyForecasts: [
@@ -126,7 +126,7 @@ async function fetchWeekForecast(_id: string): Promise<IWeekForecast> {
     });
 }
 
-async function fetchSearchResults(_searchInput: string): Promise<ICity[]> {
+async function apiFetchSearchResults(_searchInput: string): Promise<ICity[]> {
     await (new Promise<void>((resolve) => setTimeout(() => resolve(), 500)));
     return [
         {
@@ -141,8 +141,8 @@ async function fetchSearchResults(_searchInput: string): Promise<ICity[]> {
 };
 
 export {
-    fetchCityCurrentForecast,
-    fetchWeekForecast,
-    fetchSearchResults,
+    apiFetchCityCurrentForecast,
+    apiFetchWeekForecast,
+    apiFetchSearchResults,
 };
 

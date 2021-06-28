@@ -1,7 +1,7 @@
 import ICity from 'app/common/models/city';
+import { fetchSearchResults } from 'app/common/services/weather';
 import { onError } from 'app/common/utils/errors/on-error';
 import { useCallback, useEffect, useState } from 'react';
-import { fetchSearchResults } from '../../common/infra/weather-api/weather-api';
 
 function useSearchResults() {
     const [searchInput, setSearchInput] = useState<string>('');

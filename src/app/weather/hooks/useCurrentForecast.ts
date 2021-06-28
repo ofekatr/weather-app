@@ -1,8 +1,8 @@
 import ICity from 'app/common/models/city';
+import { fetchCityCurrentForecast } from 'app/common/services/weather';
 import { onError } from 'app/common/utils/errors/on-error';
 import assert from 'assert';
 import { useCallback, useEffect, useState } from 'react';
-import { fetchCityCurrentForecast } from '../../common/infra/weather-api';
 import IForecast from '../models/data/forecast';
 
 function useCurrentForecast(city: ICity) {
