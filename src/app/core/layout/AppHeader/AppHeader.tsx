@@ -1,5 +1,6 @@
 import CustomPopup from "app/common/containers/Popup";
 import { getPageNameFromLocation } from "app/common/utils/paths";
+import { AppSettingsTemperatureUnitToggle } from "app/core/components/AppSettingsTemperatureUnitToggle";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Icon, Menu, MenuItemProps } from "semantic-ui-react";
@@ -45,6 +46,9 @@ const AppHeader: React.FC = () => {
           <Icon name="favorite"></Icon>
         </Menu.Item>
       </CustomPopup>
+      <Menu.Item position="right">
+        <AppSettingsTemperatureUnitToggle />
+      </Menu.Item>
     </Menu>
   );
 };

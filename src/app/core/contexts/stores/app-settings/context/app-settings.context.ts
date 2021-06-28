@@ -12,8 +12,7 @@ const DEFAULT_STATE_METHODS: IAppSettingsContextMethods = {
     toggleAppSettingsTemperatureUnit: () => { },
 }
 
-const DEFAULT_STATE: IAppSettingsContext = {
-    ...DEFAULT_STATE_DATA,
+const DEFAULT_STATE: IAppSettingsContextMethods = {
     ...DEFAULT_STATE_METHODS,
 }
 
