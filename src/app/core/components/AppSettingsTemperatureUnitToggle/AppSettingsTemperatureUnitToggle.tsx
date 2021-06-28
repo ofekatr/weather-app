@@ -16,7 +16,7 @@ const AppSettingsTemperatureUnitToggle: React.FC = () => {
 
   return (
     <b id="toggle" onClick={onClick}>
-      { appSettingsTemperatureUnit }°
+      °{ appSettingsTemperatureUnit }
     </b>
   );
 };

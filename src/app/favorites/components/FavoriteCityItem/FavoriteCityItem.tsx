@@ -45,7 +45,7 @@ const FavoriteCityItem: React.FC<FavoriteCityItemProps> = ({
         </div>
       </Card.Header>
       <Card.Content>
-        <div>38 °C</div>
+        <div>{`${cityForecast.temperature.value} °${cityForecast.temperature.unit}`}</div>
         <div>Partially Cloudy</div>
       </Card.Content>
     </Card>
