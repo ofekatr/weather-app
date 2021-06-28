@@ -1,4 +1,5 @@
-import IAppSettingsContext, { IAppSettingsContextData, IAppSettingsContextMethods } from './models/app-settings-context'
+import { createContext } from 'react';
+import IAppSettingsContext, { IAppSettingsContextData, IAppSettingsContextMethods } from './models/app-settings-context';
 
 const TEMPERATURE_UNITS = ['C', 'F'];
 
@@ -7,8 +8,8 @@ const DEFAULT_STATE_DATA: IAppSettingsContextData = {
 }
 
 const DEFAULT_STATE_METHODS: IAppSettingsContextMethods = {
-    getAppTemperatureUnit: () => 1,
-    toggleAppTemperatureUnit: () => {},
+    getAppSettingsTemperatureUnit: () => 1,
+    toggleAppSettingsTemperatureUnit: () => { },
 }
 
 const DEFAULT_STATE: IAppSettingsContext = {
@@ -16,8 +17,12 @@ const DEFAULT_STATE: IAppSettingsContext = {
     ...DEFAULT_STATE_METHODS,
 }
 
-export default DEFAULT_STATE;
+const AppSettingsContext = createContext(DEFAULT_STATE);
 
 export {
     TEMPERATURE_UNITS,
-}
+    DEFAULT_STATE_DATA,
+    DEFAULT_STATE_METHODS,
+    DEFAULT_STATE,
+    AppSettingsContext,
+};

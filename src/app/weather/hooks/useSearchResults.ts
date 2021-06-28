@@ -1,4 +1,4 @@
-import ICity from 'app/common/models/city';
+import { ICity } from 'app/common/models';
 import { fetchSearchResults } from 'app/common/services/weather';
 import { onError } from 'app/common/utils/errors/on-error';
 import { useCallback, useEffect, useState } from 'react';

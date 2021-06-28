@@ -8,8 +8,10 @@ interface AppContentProps {
 
 const AppContent: React.FC<AppContentProps> = ({ children }) => {
   return (
-    <div className='app-content'>
-      <Card id='content-card' className="app-content__content-card">{children}</Card>
+    <div className="app-content">
+      <Card id="content-card" className="app-content__content-card">
+        {children}
+      </Card>
     </div>
   );
 };

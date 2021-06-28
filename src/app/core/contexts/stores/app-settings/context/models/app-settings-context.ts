@@ -3,8 +3,8 @@ export interface IAppSettingsContextData {
 }
 
 export interface IAppSettingsContextMethods {
-    getAppTemperatureUnit: () => 1 | 2;
-    toggleAppTemperatureUnit: () => void;
+    getAppSettingsTemperatureUnit: () => 1 | 2;
+    toggleAppSettingsTemperatureUnit: () => void;
 }
 
 interface IAppSettingsContext extends IAppSettingsContextData, IAppSettingsContextMethods { }

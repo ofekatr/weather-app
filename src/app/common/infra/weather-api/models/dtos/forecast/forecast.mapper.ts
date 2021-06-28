@@ -1,4 +1,4 @@
-import ICity from 'app/common/models/city';
+import {ICity} from 'app/common/models';
 import IForecast from 'app/weather/models/data/forecast';
 import IWeatherApiForecastDTO from './forecast.dto';
 

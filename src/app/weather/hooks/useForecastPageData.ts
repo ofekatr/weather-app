@@ -1,4 +1,4 @@
-import ICity from 'app/common/models/city';
+import { ICity } from 'app/common/models';
 import useCurrentForecast from './useCurrentForecast';
 import useWeekForecast from './useWeekForecast';
 
