@@ -14,7 +14,7 @@ const FavoriteCitiesList: React.FC = () => {
     <Container>
       <Card.Group centered stackable itemsPerRow={4} id="favorite-items">
         {citiesForecasts?.map((cityForecast) => (
-          <FavoriteCityItem key={cityForecast.id} cityForecast={cityForecast} />
+          <FavoriteCityItem key={cityForecast.cityId} cityForecast={cityForecast} />
         ))}
       </Card.Group>
     </Container>

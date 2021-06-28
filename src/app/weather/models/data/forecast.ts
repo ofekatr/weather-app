@@ -4,10 +4,10 @@ export interface ITemperature {
 }
 
 interface IForecast {
-    id: string;
+    cityId: string;
     weatherText: string;
     cityName: string;
-    weatherIconNumber: number;
+    weatherIconNumber: number | null;
     temperature: ITemperature;
 }
 

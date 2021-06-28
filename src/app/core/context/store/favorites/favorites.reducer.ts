@@ -28,7 +28,7 @@ const ACTION_TO_HANDLER: { [key in IFavoritesActions]: any } = {
         const newState = {
             ...state,
             favorites: state.favorites.filter(
-                (favorite) => favorite.id !== favoriteId
+                (favorite) => favorite.cityId !== favoriteId
             )
         }
         return newState;

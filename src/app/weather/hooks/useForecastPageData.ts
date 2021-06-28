@@ -1,9 +1,10 @@
+import ICity from 'app/common/models/city';
 import useCurrentForecast from './useCurrentForecast';
 import useWeekForecast from './useWeekForecast';
 
-function useForecastPageData(cityId: string) {
-    const currentForecastRes = useCurrentForecast(cityId);
-    const weekForecastRes = useWeekForecast(cityId);
+function useForecastPageData(city: ICity) {
+    const currentForecastRes = useCurrentForecast(city);
+    const weekForecastRes = useWeekForecast(city.cityId);
 
     const checkLoading = () => currentForecastRes.isLoading || weekForecastRes.isLoading;
     const checkError = () => currentForecastRes.hasError || weekForecastRes.hasError;

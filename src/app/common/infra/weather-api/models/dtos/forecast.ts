@@ -1,7 +1,6 @@
 export interface IWeatherApiTemperature {
     Value: number;
     Unit: 'C' | 'F';
-    UnitType: number;
 }
 
 interface IWeatherApiForecastDTO {

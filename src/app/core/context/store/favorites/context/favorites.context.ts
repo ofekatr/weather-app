@@ -5,25 +5,32 @@ import IFavoriteContext, { IFavoriteContextMethods, IFavoritesContextData } from
 const DEFAULT_STATE_DATA: IFavoritesContextData = {
     favorites: [
         {
-            id: 'asdasd',
+            cityId: 'asdasd',
+            cityName: 'Tel Aviv'
         },
         {
-            id: 'asdsdasdasd',
+            cityId: 'asdsdasdasd',
+            cityName: 'Tel Aviv'
         },
         {
-            id: 'fdsfsdf',
+            cityId: 'fdsfsdf',
+            cityName: 'Tel Aviv'
         },
         {
-            id: 'gdfgdfg',
+            cityId: 'gdfgdfg',
+            cityName: 'Tel Aviv'
         },
         {
-            id: 'xczvcv',
+            cityId: 'xczvcv',
+            cityName: 'Tel Aviv'
         },
         {
-            id: 'werewr',
+            cityId: 'werewr',
+            cityName: 'Tel Aviv'
         },
         {
-            id: 'ggggggggggg',
+            cityId: 'ggggggggggg',
+            cityName: 'Tel Aviv'
         }
     ],
 };

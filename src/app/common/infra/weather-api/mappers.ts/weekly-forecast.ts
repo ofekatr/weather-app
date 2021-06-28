@@ -1,23 +1,7 @@
-import ICity from 'app/common/models/city';
 import IWeekForecast from 'app/weather/models/data/week-forecast';
-import IForecast from '../../models/data/forecast'
+import IWeatherApiWeekForecastDTO from '../models/dtos/week-forecast';
 
-async function fetchCityCurrentForecast(id: string): Promise<IForecast> {
-    await (new Promise<void>((resolve) => setTimeout(() => resolve(), 500)));
-    return {
-        weatherText: 'SUNNY',
-        temperature: {
-            unit: 'C',
-            value: 27.3,
-        },
-        weatherIconNumber: 3,
-        cityName: 'Tel Aviv',
-        id
-    }
-}
-
-async function fetchWeekForecast(_id: string): Promise<IWeekForecast> {
-    await (new Promise<void>((resolve) => setTimeout(() => resolve(), 500)));
+function mapWeekForecastDtoToDomain(weeklyForecastDto: IWeatherApiWeekForecastDTO): IWeekForecast {
     return {
         dailyForecasts: [
             {
@@ -109,22 +93,6 @@ async function fetchWeekForecast(_id: string): Promise<IWeekForecast> {
     }
 }
 
-async function fetchSearchResults(searchInput: string): Promise<ICity[]> {
-    await (new Promise<void>((resolve) => setTimeout(() => resolve(), 500)));
-    return [
-        {
-            cityId: '23',
-            cityName: 'Tel-Aviv'
-        },
-        {
-            cityId: '24',
-            cityName: 'Jaffa'
-        },
-    ]
-}
-
 export {
-    fetchCityCurrentForecast,
-    fetchWeekForecast,
-    fetchSearchResults,
-}
+    mapWeekForecastDtoToDomain,
+};

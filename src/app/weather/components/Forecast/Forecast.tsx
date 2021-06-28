@@ -13,7 +13,7 @@ interface IForecastProps {
 
 const Forecast: React.FC<IForecastProps> = ({ city }) => {
   const { checkError, checkLoading, getForecastPageData } = useForecastPageData(
-    city.cityId
+    city
   );
 
   const forecastPageData = getForecastPageData();

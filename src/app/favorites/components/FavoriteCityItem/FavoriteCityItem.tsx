@@ -38,7 +38,7 @@ const FavoriteCityItem: React.FC<FavoriteCityItemProps> = ({
             ></Button>
           </CustomPopup>
           <ConfirmRemoveFavorite
-            cityId={cityForecast.id}
+            cityId={cityForecast.cityId}
             isOpen={isConfirmOpen}
             setOpen={setIsConfirmOpen}
           />

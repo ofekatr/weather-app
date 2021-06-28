@@ -1,10 +1,11 @@
+import ICity from 'app/common/models/city';
 import { onError } from 'app/common/utils/errors/on-error';
 import assert from 'assert';
 import { useCallback, useEffect, useState } from 'react';
-import { fetchCityCurrentForecast } from '../infra/weather-api';
+import { fetchCityCurrentForecast } from '../../common/infra/weather-api';
 import IForecast from '../models/data/forecast';
 
-function useCurrentForecast(cityId: string) {
+function useCurrentForecast(city: ICity) {
     const [isLoading, setIsLoading] = useState(false);
     const [currentForecast, setCurrentForecast] = useState<IForecast | null>(null);
     const [hasError, setHasError] = useState(false);
@@ -13,7 +14,7 @@ function useCurrentForecast(cityId: string) {
         async () => {
             setIsLoading(true);
             try {
-                const currentForecast = await fetchCityCurrentForecast(cityId);
+                const currentForecast = await fetchCityCurrentForecast(city);
                 assert.ok(currentForecast, 'Forecast response has no data');
                 setCurrentForecast(currentForecast);
             } catch (err) {
@@ -22,7 +23,7 @@ function useCurrentForecast(cityId: string) {
             }
             setIsLoading(false);
         },
-        [cityId],
+        [city],
     )
 
     useEffect(() => {

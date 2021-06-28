@@ -9,15 +9,20 @@ interface IForecastCurrentWeatherProps {
 
 const ForecastCurrentWeather: React.FC<IForecastCurrentWeatherProps> = ({
   className,
-  currentWeather: {
-    weatherText,
-    weatherIconNumber
-  },
+  currentWeather: { weatherText, weatherIconNumber },
 }) => {
-  return <div className={`${className} current-forecast`}>
-    <div className="current-forecast__weather-text">{weatherText}</div>
-    <img className='current-forecast__weather-image' src={`images/${weatherIconNumber}.png`} alt="weather-icon" />
-    </div>;
+  return (
+    <div className={`${className} current-forecast`}>
+      <div className="current-forecast__weather-text">{weatherText}</div>
+      {weatherIconNumber && (
+        <img
+          className="current-forecast__weather-image"
+          src={`images/${weatherIconNumber}.png`}
+          alt="weather-icon"
+        />
+      )}
+    </div>
+  );
 };
 
 export default ForecastCurrentWeather;

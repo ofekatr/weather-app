@@ -25,7 +25,7 @@ const FavoritesProvider: React.FC = (props) => {
 
   const checkExists = (favoriteId: string) =>
     !!(state as IFavoritesContextData).favorites.find(
-      (favorite) => favorite.id === favoriteId
+      (favorite) => favorite.cityId === favoriteId
     );
 
   const { favorites } = state as IFavoritesContextData;
