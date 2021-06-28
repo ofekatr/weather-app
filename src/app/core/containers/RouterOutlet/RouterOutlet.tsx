@@ -19,7 +19,7 @@ const AppPage = ({ children }: IAppPageProps) => (
 
 const AppBrowser: React.FC = () => {
   return (
-    <React.Suspense fallback={Loading}>
+    <React.Suspense fallback={<Loading/>}>
       <Router>
         <div className="router-outlet-wrapper">
           <AppHeader />

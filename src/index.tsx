@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "semantic-ui-css/semantic.min.css";
 import reportWebVitals from "./reportWebVitals";
 
-toast.configure();
+toast.configure({ limit: 1, autoClose: 2_500 });
 
 ReactDOM.render(
   <React.StrictMode>

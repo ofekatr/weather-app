@@ -2,6 +2,7 @@ import ICity from "app/common/models/city";
 import { FavoritesContext } from "app/core/context/store/favorites";
 import { ITemperature } from "app/weather/models/data/forecast";
 import React, { useCallback, useContext } from "react";
+import { toast } from 'react-toastify';
 import { Icon } from "semantic-ui-react";
 import "./forecast-header.scss";
 interface IForecastHeaderProps {
@@ -20,8 +21,12 @@ const ForecastHeader: React.FC<IForecastHeaderProps> = ({
   );
 
   const handleFavoriteButtonClicked = useCallback(() => {
-    if (checkExists(cityId)) return removeFavorite(cityId);
-    return addFavorite({ cityId, cityName });
+    if (checkExists(cityId)) {
+      removeFavorite(cityId);
+      return toast(`Successfully removed ${cityName} from favorites ✅`);
+    }
+    addFavorite({ cityId, cityName });
+    return toast(`Successfully added ${cityName} to favorites ✅`);
   }, [cityId, addFavorite, checkExists, removeFavorite]);
 
   return (
