@@ -1,14 +1,19 @@
 import { ITemperature } from './forecast';
 
-export interface ITimeOfDayTemperature {
-    temperature: ITemperature;
-    iconNumber: number;
+export interface IDayliyForecastTemperature {
+    minimum: ITemperature;
+    maximum: ITemperature;
+}
+
+export interface ITimeOfDay {
+    iconNumber: number | null;
 }
 
 export interface IDailyForecast {
     date: Date;
-    day: ITimeOfDayTemperature;
-    night: ITimeOfDayTemperature;
+    day: ITimeOfDay;
+    night: ITimeOfDay;
+    temperature: IDayliyForecastTemperature;
 }
 
 interface IWeekForecast {

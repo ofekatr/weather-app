@@ -9,7 +9,7 @@ interface IWeekDayForecastProps {
 }
 
 const WeekDayForecast: React.FC<IWeekDayForecastProps> = ({
-  dailyForecast: { date, day, night },
+  dailyForecast: { date, day, night, temperature },
 }) => {
   const [shouldRaise, setShouldRaise] = useState<boolean>(false);
 
@@ -33,7 +33,7 @@ const WeekDayForecast: React.FC<IWeekDayForecastProps> = ({
               alt="day-temperature"
             />
           )}
-          <div className="temp-item__temp">{`${day.temperature.value} °${day.temperature.unit}`}</div>
+          <div className="temp-item__temp">{`${temperature.maximum.value} °${temperature.maximum.unit}`}</div>
         </div>
         <div className="times-in-day-temps__temp-item temp-item">
           {night.iconNumber && (
@@ -43,7 +43,7 @@ const WeekDayForecast: React.FC<IWeekDayForecastProps> = ({
               alt="night-temperature"
             />
           )}
-          <div className="temp-item__temp">{`${night.temperature.value} °${night.temperature.unit}`}</div>
+          <div className="temp-item__temp">{`${temperature.minimum.value} °${temperature.minimum.unit}`}</div>
         </div>
       </div>
     </Card>

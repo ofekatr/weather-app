@@ -38,19 +38,8 @@ async function fetchWeekForecast(_id: string): Promise<IWeekForecast> {
                     Maximum: {
                         Unit: 'C',
                         Value: 27.3
-                    }
-                },
-            },
-            {
-                Date: new Date().toLocaleDateString(),
-                Day: {
-                    Icon: 3,
-                },
-                Night: {
-                    Icon: 33,
-                },
-                Temperature: {
-                    Maximum: {
+                    },
+                    Minimum: {
                         Unit: 'C',
                         Value: 27.3
                     }
@@ -68,19 +57,8 @@ async function fetchWeekForecast(_id: string): Promise<IWeekForecast> {
                     Maximum: {
                         Unit: 'C',
                         Value: 27.3
-                    }
-                },
-            },
-            {
-                Date: new Date().toLocaleDateString(),
-                Day: {
-                    Icon: 3,
-                },
-                Night: {
-                    Icon: 33,
-                },
-                Temperature: {
-                    Maximum: {
+                    },
+                    Minimum: {
                         Unit: 'C',
                         Value: 27.3
                     }
@@ -96,6 +74,48 @@ async function fetchWeekForecast(_id: string): Promise<IWeekForecast> {
                 },
                 Temperature: {
                     Maximum: {
+                        Unit: 'C',
+                        Value: 27.3
+                    },
+                    Minimum: {
+                        Unit: 'C',
+                        Value: 27.3
+                    }
+                },
+            },
+            {
+                Date: new Date().toLocaleDateString(),
+                Day: {
+                    Icon: 3,
+                },
+                Night: {
+                    Icon: 33,
+                },
+                Temperature: {
+                    Maximum: {
+                        Unit: 'C',
+                        Value: 27.3
+                    },
+                    Minimum: {
+                        Unit: 'C',
+                        Value: 27.3
+                    }
+                },
+            },
+            {
+                Date: new Date().toLocaleDateString(),
+                Day: {
+                    Icon: 3,
+                },
+                Night: {
+                    Icon: 33,
+                },
+                Temperature: {
+                    Maximum: {
+                        Unit: 'C',
+                        Value: 27.3
+                    },
+                    Minimum: {
                         Unit: 'C',
                         Value: 27.3
                     }
