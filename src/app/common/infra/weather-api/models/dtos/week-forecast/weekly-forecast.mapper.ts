@@ -1,5 +1,5 @@
 import IWeekForecast from 'app/weather/models/data/week-forecast';
-import IWeatherApiWeekForecastDTO from '../models/dtos/week-forecast';
+import IWeatherApiWeekForecastDTO from './week-forecast.dto';
 
 function mapWeekForecastDtoToDomain(weeklyForecastDto: IWeatherApiWeekForecastDTO): IWeekForecast {
     return {

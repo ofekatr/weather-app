@@ -1,8 +1,9 @@
 import ICity from 'app/common/models/city';
 import IForecast from 'app/weather/models/data/forecast';
 import IWeekForecast from 'app/weather/models/data/week-forecast';
-import { mapForecastDtoToDomain } from './mappers.ts/forecast';
-import { mapWeekForecastDtoToDomain } from './mappers.ts/weekly-forecast';
+import mapWeatherApiAutocompleteResultDtoToDomain from './models/dtos/autocomplete-result/autocomplete-result';
+import { mapForecastDtoToDomain } from './models/dtos/forecast/forecast.mapper';
+import { mapWeekForecastDtoToDomain } from './models/dtos/week-forecast/weekly-forecast.mapper';
 
 async function fetchCityCurrentForecast(city: ICity): Promise<IForecast> {
     await (new Promise<void>((resolve) => setTimeout(() => resolve(), 500)));
@@ -129,15 +130,15 @@ async function fetchSearchResults(_searchInput: string): Promise<ICity[]> {
     await (new Promise<void>((resolve) => setTimeout(() => resolve(), 500)));
     return [
         {
-            cityId: '23',
-            cityName: 'Tel-Aviv'
+            Key: '23',
+            LocalizedName: 'Tel Aviv'
         },
         {
-            cityId: '24',
-            cityName: 'Jaffa'
-        },
-    ]
-}
+            Key: '24',
+            LocalizedName: 'Jaffa'
+        }
+    ].map((mapWeatherApiAutocompleteResultDtoToDomain));
+};
 
 export {
     fetchCityCurrentForecast,

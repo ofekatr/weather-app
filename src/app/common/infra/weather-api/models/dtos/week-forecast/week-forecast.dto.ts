@@ -1,4 +1,4 @@
-import { IWeatherApiTemperature } from './forecast';
+import { IWeatherApiTemperature } from '../forecast/forecast.dto';
 
 export interface IWeatherApiIconHolder {
     Icon: number | null;

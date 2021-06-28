@@ -1,6 +1,6 @@
 import ICity from 'app/common/models/city';
 import IForecast from 'app/weather/models/data/forecast';
-import IWeatherApiForecastDTO from '../models/dtos/forecast';
+import IWeatherApiForecastDTO from './forecast.dto';
 
 function mapForecastDtoToDomain({ cityId, cityName }: ICity, { Temperature, WeatherIcon, WeatherText }: IWeatherApiForecastDTO): IForecast {
     return {
