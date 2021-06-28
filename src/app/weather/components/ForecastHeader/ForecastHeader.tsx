@@ -1,5 +1,5 @@
 import ICity from "app/common/models/city";
-import { FavoritesContext } from "app/core/context/store/favorites";
+import { FavoritesContext } from "app/core/contexts/stores/favorites";
 import { ITemperature } from "app/weather/models/data/forecast";
 import React, { useCallback, useContext } from "react";
 import { toast } from 'react-toastify';

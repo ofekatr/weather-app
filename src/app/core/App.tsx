@@ -1,7 +1,7 @@
 import RouterOutlet from "app/core/containers/RouterOutlet";
 import React from "react";
 import AppContent from "./containers/AppContent/AppContent";
-import { FavoritesProvider } from "./context/store/favorites";
+import { FavoritesProvider } from "./contexts/stores/favorites";
 
 function App() {
 

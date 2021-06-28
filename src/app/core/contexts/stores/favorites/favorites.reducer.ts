@@ -1,4 +1,4 @@
-import IFavorite from '../models/favorite';
+import IFavorite from './models/favorite';
 import IFavoriteContext from './context/models/favorites-context';
 import FAVORITES_ACTIONS, { IFavoritesActions } from './favorites.actions';
 

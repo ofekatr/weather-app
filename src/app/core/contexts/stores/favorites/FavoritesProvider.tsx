@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import IFavorite from "../models/favorite";
+import IFavorite from "./models/favorite";
 import {
   DEFAULT_STATE_DATA,
   FavoritesContext

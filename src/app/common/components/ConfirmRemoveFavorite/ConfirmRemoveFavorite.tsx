@@ -1,4 +1,4 @@
-import { FavoritesContext } from "app/core/context/store/favorites";
+import { FavoritesContext } from "app/core/contexts/stores/favorites";
 import React, { useCallback, useContext } from "react";
 import { Confirm, TransitionablePortal } from "semantic-ui-react";
 
