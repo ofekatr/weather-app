@@ -1,5 +1,7 @@
 import IAppSettingsContext, { IAppSettingsContextData, IAppSettingsContextMethods } from './models/app-settings-context'
 
+const TEMPERATURE_UNITS = ['C', 'F'];
+
 const DEFAULT_STATE_DATA: IAppSettingsContextData = {
     temperatureUnitCode: 1,
 }
@@ -15,3 +17,7 @@ const DEFAULT_STATE: IAppSettingsContext = {
 }
 
 export default DEFAULT_STATE;
+
+export {
+    TEMPERATURE_UNITS,
+}
