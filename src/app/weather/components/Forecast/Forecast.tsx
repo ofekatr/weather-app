@@ -1,3 +1,4 @@
+import { Loading } from "app/common/components/Loading";
 import ICity from "app/common/models/city";
 import useForecastPageData from "app/weather/hooks/useForecastPageData";
 import React from "react";
@@ -20,7 +21,7 @@ const Forecast: React.FC<IForecastProps> = ({ city }) => {
 
   if (checkError()) return <></>;
 
-  if (checkLoading() || !forecastPageData) return <>Loading...</>;
+  if (checkLoading() || !forecastPageData) return <Loading />;
 
   return (
     <Card

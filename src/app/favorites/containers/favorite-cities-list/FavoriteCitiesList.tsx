@@ -1,3 +1,4 @@
+import { Loading } from "app/common/components/Loading";
 import FavoriteCityItem from "app/favorites/components/FavoriteCityItem";
 import useFavoritesPageData from "app/favorites/hooks/useFavoritesPageData";
 import React from "react";
@@ -8,13 +9,16 @@ const FavoriteCitiesList: React.FC = () => {
 
   if (hasError) return <></>;
 
-  if (isLoading || !citiesForecasts) return <>Loading...</>;
+  if (isLoading || !citiesForecasts) return <Loading />;
 
   return (
     <Container>
       <Card.Group centered stackable itemsPerRow={4} id="favorite-items">
         {citiesForecasts?.map((cityForecast) => (
-          <FavoriteCityItem key={cityForecast.cityId} cityForecast={cityForecast} />
+          <FavoriteCityItem
+            key={cityForecast.cityId}
+            cityForecast={cityForecast}
+          />
         ))}
       </Card.Group>
     </Container>

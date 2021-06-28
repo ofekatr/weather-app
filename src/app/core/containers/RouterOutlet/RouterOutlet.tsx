@@ -1,3 +1,4 @@
+import { Loading } from "app/common/components/Loading";
 import AppHeader from "app/core/layout/AppHeader";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -18,7 +19,7 @@ const AppPage = ({ children }: IAppPageProps) => (
 
 const AppBrowser: React.FC = () => {
   return (
-    <React.Suspense fallback={<span>Loading...</span>}>
+    <React.Suspense fallback={Loading}>
       <Router>
         <div className="router-outlet-wrapper">
           <AppHeader />
