@@ -26,7 +26,7 @@ const ForecastHeader: React.FC<IForecastHeaderProps> = ({
       return toast(`Successfully removed ${cityName} from favorites ✅`);
     }
     addFavorite({ cityId, cityName });
-    return toast(`Successfully added ${cityName} to favorites ✅`);
+    return toast(`Successfully added ${cityName} to favorites ❤️`);
   }, [cityId, cityName, addFavorite, checkExists, removeFavorite]);
 
   return (

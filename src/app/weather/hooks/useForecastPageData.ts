@@ -33,6 +33,7 @@ function useForecastPageData(city: ICity) {
         checkLoading,
         checkError,
         getForecastPageData,
+        
     };
 }
 

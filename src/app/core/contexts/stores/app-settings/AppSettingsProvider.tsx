@@ -14,11 +14,15 @@ const AppSettingsProvider: React.FC<any> = (props) => {
   const getAppSettingsTemperatureUnit = () =>
     TEMPERATURE_UNITS[state.temperatureUnitCode - 1];
 
+  const checkAppSettingsTemperatureMetric = () => state.temperatureUnitCode === 1;
+
   return (
     <AppSettingsContext.Provider
       value={{
         toggleAppSettingsTemperatureUnit,
         getAppSettingsTemperatureUnit,
+        checkAppSettingsTemperatureMetric,
+        temperatureUnitCode: state.temperatureUnitCode,
       }}
       {...props}
     ></AppSettingsContext.Provider>

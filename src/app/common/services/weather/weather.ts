@@ -3,12 +3,12 @@ import { ICity } from 'app/common/models';
 import IForecast from 'app/weather/models/data/forecast';
 import IWeekForecast from 'app/weather/models/data/week-forecast';
 
-async function fetchCityCurrentForecast(city: ICity): Promise<IForecast> {
-    return await apiFetchCityCurrentForecast(city);
+async function fetchCityCurrentForecast(city: ICity, metric: boolean = true): Promise<IForecast> {
+    return await apiFetchCityCurrentForecast(city, metric);
 }
 
-async function fetchWeekForecast(id: string): Promise<IWeekForecast> {
-    return apiFetchWeekForecast(id);
+async function fetchWeekForecast(id: string, metric: boolean = true): Promise<IWeekForecast> {
+    return apiFetchWeekForecast(id, metric);
 }
 
 

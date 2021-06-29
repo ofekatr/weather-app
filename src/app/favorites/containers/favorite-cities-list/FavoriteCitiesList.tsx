@@ -11,6 +11,13 @@ const FavoriteCitiesList: React.FC = () => {
 
   if (isLoading || !citiesForecasts) return <Loading />;
 
+  if (!citiesForecasts.length)
+    return (
+      <div style={{ textAlign: "center" }}>
+        <h2>No favorite cities yet.</h2>
+      </div>
+    );
+
   return (
     <Container>
       <Card.Group centered stackable itemsPerRow={4} id="favorite-items">

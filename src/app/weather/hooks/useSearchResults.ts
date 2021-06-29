@@ -11,6 +11,8 @@ function useSearchResults() {
 
     const searchResultsCallback = useCallback(async () => {
         try {
+            if (!searchInput) return;
+
             setIsLoading(true);
             const searchResultsResponse = await fetchSearchResults(searchInput);
             setSearchResults(searchResultsResponse);
