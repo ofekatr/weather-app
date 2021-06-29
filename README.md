@@ -1,6 +1,6 @@
 # Weather Dashboard App
 A dashboard interface for clients to consume weather details for cities all over the world.  
-A demo is available <a href='https://google.com'>here</a>
+A demo is available <a href='https://ofekatr-weather-app.netlify.app'>here</a>.
 
 ## Features
 - Real-time accurate daily and weekly forecasts for cities around the world.
