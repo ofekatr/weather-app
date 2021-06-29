@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import { Icon, Menu, MenuItemProps } from "semantic-ui-react";
 
 const MobileAppHeader: React.FC = () => {
-  const [isSidebarVisible, setIsSidebarVisible] = useState<boolean>(false);
-
   const [activeItem, setActiveItem] = useState<string>(
     getPageNameFromLocation()
   );

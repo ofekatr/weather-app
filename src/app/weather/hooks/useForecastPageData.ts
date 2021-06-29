@@ -6,18 +6,27 @@ function useForecastPageData(city: ICity) {
     const currentForecastRes = useCurrentForecast(city);
     const weekForecastRes = useWeekForecast(city.cityId);
 
-    const checkLoading = () => currentForecastRes.isLoading || weekForecastRes.isLoading;
-    const checkError = () => currentForecastRes.hasError || weekForecastRes.hasError;
+    const checkLoading = () => [
+        currentForecastRes.isLoading,
+        weekForecastRes.isLoading,
+    ].some(Boolean);
+
+    const checkError = () => [
+        currentForecastRes.hasError,
+        weekForecastRes.hasError,
+    ].some(Boolean);
+
     const getForecastPageData = () =>
-        !currentForecastRes.forecast || !weekForecastRes.weekForecast ?
+        !currentForecastRes.forecast ||
+            !weekForecastRes.weekForecast ?
             null :
             ({
                 current: {
                     ...currentForecastRes.forecast,
                 },
                 week: {
-                    ...weekForecastRes.weekForecast
-                }
+                    ...weekForecastRes.weekForecast,
+                },
             });
 
     return {

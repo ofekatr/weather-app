@@ -140,9 +140,17 @@ async function apiFetchSearchResults(_searchInput: string): Promise<ICity[]> {
     ].map((mapWeatherApiAutocompleteResultDtoToDomain));
 };
 
+async function apiFetchCityByCoords(coords: { lon: number, lat: number }): Promise<ICity> {
+    return {
+        cityId: "215854",
+        cityName: "Tel Aviv",
+    };
+}
+
 export {
     apiFetchCityCurrentForecast,
     apiFetchWeekForecast,
     apiFetchSearchResults,
+    apiFetchCityByCoords,
 };
 
