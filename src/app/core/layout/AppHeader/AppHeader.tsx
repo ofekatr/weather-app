@@ -1,56 +1,10 @@
-import CustomPopup from "app/common/containers/Popup";
-import { getPageNameFromLocation } from "app/common/utils/paths";
-import { AppSettingsTemperatureUnitToggle } from "app/core/components/AppSettingsTemperatureUnitToggle";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Icon, Menu, MenuItemProps } from "semantic-ui-react";
-import "./app-header.scss";
+import React from "react";
+import { isMobile } from "react-device-detect";
+import BrowserAppHeader from "./BrowserAppHeader/BrowserAppHeader";
+import MobileAppHeader from "./MobileAppHeader/MobileAppHeader";
 
 const AppHeader: React.FC = () => {
-  const [activeItem, setActiveItem] = useState<string>(
-    getPageNameFromLocation()
-  );
-
-  const handleItemClick = (_e: React.MouseEvent, { name }: MenuItemProps) => {
-    setActiveItem(name as string);
-  };
-
-  return (
-    <Menu pointing secondary>
-      <Link
-        onClick={(e) => handleItemClick(e, { name: "weather" })}
-        to="/"
-        className="weather-app-logo-wrapper"
-      >
-        <img alt="weather-app-logo" src={"images/weather-app-logo.jpg"} />
-      </Link>
-      <CustomPopup content="Home">
-        <Menu.Item
-          name="weather"
-          onClick={handleItemClick}
-          active={activeItem === "weather"}
-          as={Link}
-          to={"/"}
-        >
-          <Icon name="home"></Icon>
-        </Menu.Item>
-      </CustomPopup>
-      <CustomPopup content="Favorites">
-        <Menu.Item
-          name="favorites"
-          onClick={handleItemClick}
-          active={activeItem === "favorites"}
-          as={Link}
-          to={"/favorites"}
-        >
-          <Icon name="favorite"></Icon>
-        </Menu.Item>
-      </CustomPopup>
-      <Menu.Item position="right">
-        <AppSettingsTemperatureUnitToggle />
-      </Menu.Item>
-    </Menu>
-  );
+  return <>{isMobile ? <MobileAppHeader /> : <BrowserAppHeader />}</>;
 };
 
 export default AppHeader;
