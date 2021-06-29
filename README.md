@@ -28,7 +28,7 @@ A demo is available <a href='https://ofekatr-weather-app.netlify.app'>here</a>.
 ### app folder
 - `core` - folder containing app instantiation logic and core functionality related files.
 - `common` - folder with common app files.
-- `weather` - Weather (home) page module related files.
+- `weather` - Weather (Home) page module related files.
 - `favorites` - Favorites page module related files.
 ## How to run locally
 ### Add .env file with following variables
