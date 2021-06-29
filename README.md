@@ -14,7 +14,7 @@ A dashboard interface for clients to consume weather details for cities all over
 ## Project Structure
 ### app folder
 - `core` - folder containing app instantiation logic and core functionality related files.
-- `common` - folder with common app files
+- `common` - folder with common app files.
 - `weather` - Weather (home) page module related files.
 - `favorites` - Favorites page module related files.
 ## How to run locally
