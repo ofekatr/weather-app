@@ -1,7 +1,17 @@
 # Weather Dashboard App
 A dashboard interface for clients to consume weather related information for cities all over the world. 
 
-## Project structure
+## Features
+- Real-time accurate daily and weekly forecasts for cities around the world.
+- Favorites collection to save frequently searched cities.
+- Supplying forecasts for clients' current location based on geoposition coordinates.
+- Supports metric and imperial modes.
+
+## Implementation Details
+- Developed in TypeScript, using React.
+- Consumes AccuWeather API for weather and geoposition related data.
+
+## Project Structure
 ### app folder
 - `core` - folder containing app instantiation logic and core functionality related files.
 - `common` - folder with common app files
