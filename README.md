@@ -1,5 +1,5 @@
 # Weather Dashboard App
-A dashboard interface for clients to consume weather related information for cities all over the world. 
+A dashboard interface for clients to consume weather details for cities all over the world. 
 
 ## Features
 - Real-time accurate daily and weekly forecasts for cities around the world.
