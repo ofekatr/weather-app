@@ -37,4 +37,4 @@ $ npm start
 - use `npm run start` to run in autocompile mode.
 
 #### Other scripts
-- use `npm run build` to build app and compile it to build folder.
+- use `npm run build` to create an optimized production build and compile it to `build` folder.
