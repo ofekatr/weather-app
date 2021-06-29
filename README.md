@@ -8,11 +8,6 @@ A demo is available <a href='https://ofekatr-weather-app.netlify.app'>here</a>.
 - Supplying forecasts for clients' current location based on geoposition coordinates.
 - Supports metric and imperial modes.
 
-## Implementation Details
-- Developed in TypeScript, using React.
-- Applies Semantic-UI elements into styling.
-- Consumes AccuWeather API for weather and geoposition related data.
-
 ## Pictures
 ![Screenshot (167)](https://user-images.githubusercontent.com/46415136/123808445-6cdfe180-d8f9-11eb-800c-e64665fc936e.png)
 
@@ -23,6 +18,11 @@ A demo is available <a href='https://ofekatr-weather-app.netlify.app'>here</a>.
 ![Screenshot (170)](https://user-images.githubusercontent.com/46415136/123808455-6ea9a500-d8f9-11eb-9912-c489f67dcf4e.png)
 
 ![Screenshot (171)](https://user-images.githubusercontent.com/46415136/123808453-6e110e80-d8f9-11eb-9965-f6eb36faa56e.png)
+
+## Implementation Details
+- Developed in TypeScript, using React.
+- Applies Semantic-UI elements into styling.
+- Consumes AccuWeather API for weather and geoposition related data.
 
 ## Project Structure
 ### app folder
