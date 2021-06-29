@@ -1,5 +1,5 @@
 # Weather Dashboard App
-A dashboard interface for consumers to get weather related information for cities all over the world. 
+A dashboard interface for clients to consume weather related information for cities all over the world. 
 
 ## Project structure
 ### app folder
