@@ -22,7 +22,7 @@ A demo is available <a href='https://ofekatr-weather-app.netlify.app'>here</a>.
 ## Implementation Details
 - Developed in TypeScript, using React.
 - Consumes AccuWeather API for weather and geoposition related data.
-- Applies Semantic-UI elements into styling.
+- Applies Semantic-UI elements for styling.
 - Utilizes Toast.js for error handling.
 
 ## Project Structure
