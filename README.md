@@ -1,4 +1,4 @@
-# Weather Dashboard App <a src="https://i.pinimg.com/originals/30/b1/1a/30b11a92a85361de088b6d668785f0aa.jpg" style="height: 1em;"/>
+# Weather Dashboard App
 A dashboard interface for clients to consume weather details for cities all over the world.  
 A demo is available <a href='https://ofekatr-weather-app.netlify.app'>here</a>.
 
